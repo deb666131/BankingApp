@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Banking App</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Banking App</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#login">Login</a></li>
+			<li><a href="#register">Register</a></li>
+			<li><a href="#dashboard">Dashboard</a></li>
+			<li><a href="#transaction">Transaction History</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section id="login">
+			<h2>Login</h2>
+			<form>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username">
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password">
+				<button type="submit">Login</button>
+			</form>
+		</section>
+		<section id="register">
+			<h2>Register</h2>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email">
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username">
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password">
+				<button type="submit">Register</button>
+			</form>
+		</section>
+		<section id="dashboard">
+			<h2>Welcome, <span id="user"></span>!</h2>
+			<div id="balance">
+				<p>Your current balance is:</p>
+				<span id="amount"></span>
+			</div>
+			<form>
+				<label for="deposit">Deposit:</label>
+				<input type="number" id="deposit" name="deposit">
+				<button type="submit" onclick="deposit()">Submit</button>
+			</form>
+			<form>
+				<label for="withdraw">Withdraw:</label>
+				<input type="number" id="withdraw" name="withdraw">
+				<button type="submit" onclick="withdraw()">Submit</button>
+			</form>
+			<form>
+				<label for="transfer">Transfer to:</label>
+				<input type="text" id="transfer" name="transfer">
+				<label for="amount">Amount:</label>
+				<input type="number" id="amount" name="amount">
+				<button type="submit" onclick="transfer()">Submit</button>
+			</form>
+		</section>
+		<section id="transaction">
+			<h2>Transaction History</h2>
+			<div id="history"></div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Banking App. All rights reserved.</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>
