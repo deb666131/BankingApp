@@ -1,0 +1,33 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class NumberGuessingGame {
+    public static void main(String[] args) {
+        int min = 10; 
+        int max = 1000; 
+        int n = new Random().nextInt(max - min + 1) + min; 
+        int maxAttempts = 8; 
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the number guessing game!");
+        System.out.println("You have " + maxAttempts + " attempts to guess a number between " + min + " and " + max + ".");
+        
+
+        for (int i = 1; i <= maxAttempts; i++) {
+            System.out.print("Attempt #" + i + ": ");
+            int g = scanner.nextInt();
+
+            if (g == n) {
+                System.out.println("Congratulations, you guessed the number in " + i + " attempt(s)!");
+                return;
+            } else if (g < n) {
+                System.out.println("Your guess is too low.");
+            } else {
+                System.out.println("Your guess is too high.");
+            }
+        }
+
+        System.out.println("Sorry, you have used all your attempts. The number was " + n + ".");
+    }
+}
